@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+  gong:
+    image: asterisk-test:0.0.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: asterisk-test-1 
+    hostname: asterisk-test-1 
+    ports:
+    - 4576:4576
+    volumes:
+    - ./configs:/etc/asterisk
