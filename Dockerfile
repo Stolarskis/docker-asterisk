@@ -36,6 +36,8 @@ WORKDIR /
 RUN sed -i -e 's/# MAXFILES=/MAXFILES=/' /usr/sbin/safe_asterisk
 # Set tty
 RUN sed -i 's/TTY=9/TTY=/g' /usr/sbin/safe_asterisk
+#Install Vim (please)
+RUN yum update && yum install -y vim 
 # Create and configure asterisk for running asterisk user.
 RUN useradd -m asterisk -s /sbin/nologin
 RUN chown asterisk:asterisk /var/run/asterisk
