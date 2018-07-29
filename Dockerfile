@@ -46,4 +46,7 @@ RUN chown -R asterisk:asterisk /var/{lib,log,spool}/asterisk
 RUN chown -R asterisk:asterisk /usr/lib64/asterisk/
 
 # Running asterisk with user asterisk.
-CMD /usr/sbin/asterisk -f -U asterisk -G asterisk -vvvg -c
+CMD tail -f /dev/null
+
+#asterisk -rx "core restart now"
+#asterisk -rvvvvv
